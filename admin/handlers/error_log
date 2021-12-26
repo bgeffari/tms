@@ -1,0 +1,2 @@
+[25-Aug-2021 10:20:11 Asia/Riyadh] PHP Warning:  unlink(../../assets/courses/logoo.png): No such file or directory in /home2/awptms/public_html/admin/handlers/delete_cours.php on line 25
+[25-Aug-2021 10:20:15 Asia/Riyadh] PHP Warning:  unlink(../../assets/courses/logoo.png): No such file or directory in /home2/awptms/public_html/admin/handlers/delete_cours.php on line 25
