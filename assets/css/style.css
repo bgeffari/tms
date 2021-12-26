@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=David+Libre:wght@500&display=swap');
+html{
+    scroll-behavior: smooth;
+    /* direction: rtl; */
+    
+}
+
+    .carousel-indicators li {
+        height: 8px;
+        margin-right: 10px;
+    }
+    .carousel-indicators  .active{
+        height: 12px;
+        background-color: #f7b027;
+    }
+    #contact{
+        margin-bottom: 45px;
+    }
+    .contactus{
+            font-size: 24px;
+    font-weight: 500;
+    }
+    .spanicon{
+            font-size: 45px;
+    margin-bottom: 15px;
+    color: #c2b609;
+}
+    }
+    .con_box{
+            padding: 40px !important;
+    border-radius: 150px 0px;
+    }
+    .marbott{
+
+        margin-bottom: 10px;
+    }
+    .teext{
+        display: none;
+    }
+    .reasize{
+        min-width: 100%;
+        min-height: 600px;
+        max-height: 650px;
+    }
+    .reapos{
+        position: absolute;
+        top: 30%;
+        padding: 30px;
+        color: #fff;
+        background-color: rgba(4,4,4,0.5);
+        min-width: 600px;
+        right: 20%;
+        font-size: 30px;
+    }
+    .backcarousel{
+        width: 100%;
+        background-color: rgba(4,4,4,0.4);
+        height: 100%;
+        position: absolute;
+        top: 0;
+    }
+    .reaposdiv{
+        position: absolute;
+        top: 50%;
+        right: 23%;
+    }
+    .reaposbtn{
+        text-align: center;
+        width: 200px;
+        height: 60px;
+        background: none;
+        color: #fff;
+        font-size: 24px;
+        border: 3px solid #fff;
+            box-shadow: 7px 7px 10px;
+
+    }
+    .imgbusiness{
+        border-radius: 10px;
+        max-width: 100%;
+        max-height: 100%;
+
+    }
+    .h2business{
+        position: absolute;
+        top: -20px;
+        background-color: white;
+        border-radius: 10px;
+    }
+    .whyb{
+        height: 100%;
+        width: 100%;
+        background-color: rgba(4,4,4,0.5);
+        color: #fff;
+
+    }
+
+.whym{
+    padding-top: 50px;
+    background-image: url("../images/portfolios/5f79e0a847f539.78943999.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center ;
+    padding-bottom: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    position: relative;
+}
+.whym div .backma{
+    border-radius: 50px;
+    height: 500px;
+    background-image: url('../image/normal-0.jpg');
+    background-size: cover;
+    min-height: 380px;
+}
+.whym .mard{
+    display: flex;
+}
+.whym .whyHeader h1{
+    font-weight: 600;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+.whym .mard .icon{
+    border-radius: 50%;
+    background-color: #fab128;
+    position: relative;
+}
+.whym .mard .icon .spanicon{
+      color: #fff;
+      position: absolute;
+      top: 18%;
+      right: 16%;
+}
+.whtm .mard .icon span.ccenter{
+    -webkit-align-itemes:center;
+}
+.whym .mard .text {
+    width: calc(100% - 60px); 
+    margin-bottom: 20px;
+}
+   .d-flex{
+    display: flex;
+   }
+ .whym .mard .text h4{
+    font-weight: 600;
+ }
+ .whym .mard .text p{
+    color: #404040;
+    line-height: 1;
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: #fff;
+ }
+
+.whatsapp{
+    position: fixed;
+    bottom: 100px;
+    left: 50px;
+    z-index: 999;
+    display: none;
+}
+.whatsapp .fa-whatsapp{
+    font-size: 100px;
+    color: green;
+}
+.whatsapp label{
+    position: absolute;
+    right: -150px;
+    top: 40%;
+    font-size: 20px;
+        max-width: none;
+        color: #00bd56;
+
+}
+.whatsapp .whatsmassge{
+    display: inline-block;
+    height: 20px;
+    width: 25px;
+    background-color: #ddd;
+    border: 1px solid;
+    position: absolute;
+    right: -110px;
+    top: 30px;
+    border-radius:500% 0px 0px 500%; 
+}
+
+@media (min-width: 300px) {
+    .hideinlg{
+        position: absolute;
+        top: 45%;
+        left: 22%; 
+        height: 80px;
+    }
+    .divbtn{
+        display: none;
+    }
+    .h2business{
+        right: 33%
+    }
+    .whym .mard .icon{
+        width: 35px;
+        height: 35px;
+    }
+    .whym .mard .icon .spanicon{
+        font-size: 20px;
+    }
+    .whym .mard .text h4{
+        font-size: 18px;
+
+    }
+    .whym .mard .text p{
+        font-size: 12px;
+
+    }
+    .whym .whyHeader h1{
+        font-size: 24px;
+    }
+
+    .whatsapp{
+        left: 10px;
+    }
+    .whatsapp .fa-whatsapp{
+        font-size: 70px;
+    }
+
+}
+/***********************************
+*/
+@media (min-width: 992px) {
+    #services{
+        display: none;
+    }
+    .hideinlg{
+        display: none;
+    }
+    .reaposdiv{
+        right: 20%;
+    }
+    .divbtn{
+        display: inline-block;
+    }
+    .h2business{
+        right: 45%;
+    }
+    .whym .mard .icon{
+        width: 70px;
+        height: 70px;
+        margin-right: 10px;
+    }
+    .whym .mard .icon .spanicon{
+    font-size: 40px;
+    }
+    .whym .mard .text h4{
+    font-size: 30px;
+
+    }
+    .whym .mard .text p{
+    font-size: 22px;
+
+    }
+    .whym .whyHeader h1{
+    font-size: 35px;
+    letter-spacing: 5px;
+    }
+
+    .reaposbtn{
+        top: 38%;
+        left: 43%;
+        min-height: 80px;
+
+    }
+     .choosrecord{
+        display: block;
+    }
+}
+
+.hr.divider{
+        max-width: 3.25rem;
+    border-width: 0.2rem;
+    border-color: #eca424;
+}
+
+ 

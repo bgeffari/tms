@@ -1,0 +1,100 @@
+
+	<div class="container">
+		
+		<?php
+		
+	
+
+			$cours_q = "SELECT * FROM cours ORDER BY id DESC";
+		
+		?>
+		<div class="content">
+			<br>
+			
+			
+			<div class="l_categories text-right" dir="rtl">
+				
+				
+				<h3>قائمة الكورسات  المضافة :</h3>
+				<div class="row">
+
+				
+				<?php
+				$fetch_cours= mysqli_query($con, $cours_q);
+
+				if(mysqli_num_rows($fetch_cours) == 0){
+					?> <div class="no_items"><center><p>There is no courses To show , Go ahead and Add one ..</p></center></div> <?php
+				}
+
+				while($row= mysqli_fetch_array($fetch_cours)){
+                    $cours_id= $row['id'];
+					$cours_image = $row['image'];
+					$cours_name = $row['titlle'];
+				
+					?>
+					
+
+
+					
+				
+
+				<div class="col-lg-4 portfb">
+
+					<div class="text-center p_image">
+						<img src="../assets/courses/<?php echo $cours_image; ?>">
+					</div>
+					<div class="text-center">
+						<h6 class="mt-1"><?php echo $cours_name; ?>&nbsp;<br>
+						<?php echo $row['score'];?>/نقاط  /  <span><?php echo $row['cost']; ?> /ريال </span>
+						<br>
+						<p class="lead" > <?php echo $row['discrip']; ?> </p>
+						<button class="btn btn-sm py-0 btn-del" id="port<?php echo $cours_id; ?>">Delete</button>
+						</h6>
+					</div>
+
+
+				</div>
+				<br>
+				
+                <script>
+					$(document).ready(function(){
+
+						$('#port<?php echo $cours_id; ?>').on('click', function(){
+							
+							bootbox.confirm("هل انت واثق بحذفك لهذا الكورس ?", function(result){
+
+								if(result == true){
+								
+									$.post("handlers/delete_cours.php?cours_id=<?php echo $cours_id; ?>", {result:result});
+									window.location.reload();
+								}
+							});
+
+						});
+
+
+					}); // end of all document.ready
+				</script>
+
+
+							
+				
+				<?php
+
+				
+				} // end of while loop
+				
+				?>
+
+				</div>
+			</div>
+		</div>
+
+	</div>
+    </section>
+
+
+	
+    
+</body>
+</html>

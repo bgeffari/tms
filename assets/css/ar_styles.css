@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@600&display=swap');
+
+
+
+*{
+    font-family: 'El Messiri', sans-serif;
+    text-align: right;
+
+}
+
+
+.text-center *{
+    text-align: center!important;
+}
+.ar_form{
+    text-align: right!important;
+}
+
+

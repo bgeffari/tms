@@ -1,0 +1,369 @@
+@font-face{
+	font-family: 'prime';
+	src: url("../fonts/Prime-Regular.otf");
+}
+html{
+	scroll-behavior: smooth;
+}
+
+.form-signin{
+    background-color: rgb(14, 14, 0);
+    box-shadow:  0 0 3px 0.3px yellow;
+}
+
+.topbar{
+	min-height: 18vh;
+	background-color: #0e0c01;
+	width: 100%;
+	overflow: auto!important;
+}
+.menu ul li{
+	display: inline;
+	
+	
+}
+.menu ul li a:hover{
+	text-decoration: none;
+	background-color: rgba(242, 245, 70, 0.0192);
+	color: white;
+}
+.active{
+	background-color: #fff!important;
+	color:white;
+}
+.menu ul li a{
+	padding: 8px 20px;
+	background-color: aliceblue;
+    transition: 1s ease;
+    color: black;
+}
+.np{
+	
+	padding: 0!important;
+}
+/*small screen css*/
+@media (max-width: 850px){
+	.menu ul li{
+		display:flex;
+		margin-bottom: 6px;
+		
+    }
+}
+.welcome{
+    margin-top: 10px;
+    margin-bottom: 10px;
+	color: white;
+}
+.logout{
+	float: right;
+	padding: 10px;
+}
+.content{
+    color: black;
+}
+.btn-view{
+    background-color: black;
+    color: yellow;
+    border: solid 1px yellow!important;
+    float: right!important;
+}
+
+button{
+	box-shadow: none;
+}
+
+/*small screen css*/
+@media (max-width: 500px){
+	.container{
+		max-width: 80%!important;
+	}
+}
+@media (max-width: 650px){
+	.mb{
+		margin-bottom: 15px!important;
+	}
+}
+.form-control{
+	margin-bottom: 5px;
+}
+.drp a{
+	color: black;
+}
+.drp a:hover{
+	background-color: rgb(77, 69, 2);
+	color: white;
+}
+.actv{
+	background-color: rgb(5, 0, 46);
+	color: aliceblue!important;
+}
+@media(min-width : 600px){
+	.form_wrapper{
+		max-width: 70%;
+		margin:auto;
+	}
+}
+.btn-go{
+	background-color: rgb(4, 0, 43);
+	color: white;
+}
+.indic{
+	background-color: black;
+	color: white!important;
+	margin-bottom: 15px;
+}
+.prroj{
+	background-color: rgba(212, 199, 14, 0.212)!important;
+	margin-bottom: 7px;
+}
+.btn-status{
+	background-color: green;
+	color: white;
+}
+.ag{
+	background-color: rgb(0, 0, 100)!important;
+}
+
+.btn-proce{
+	background-color: aliceblue;
+}
+.noti{
+	background-color: aliceblue;
+	color: black;
+}
+.noti_badge{
+	border-radius: 50%!important;
+}
+.form_wrapper .form-control:focus{
+	box-shadow: none!important;
+	border-color: rgb(125, 128, 0);
+}
+.none{
+	background-color:rgb(156, 162, 163) !important;
+}
+.discu{
+	background-color:rgb(102, 157, 228) !important;
+}
+.n_ag{
+	background-color:rgb(153, 0, 0) !important;
+}
+.constr{
+	background-color:rgb(109, 110, 0) !important;
+}
+.btn-goo{
+	background-color: rgb(109, 110, 0);
+	color: aliceblue;
+}
+.modal .form-control:focus{
+	box-shadow: none!important;
+	border-color: rgb(144, 158, 15)!important;
+}
+.succ{
+	background-color: rgba(0, 128, 0, 0.308);
+	border-right: 3px solid green;
+}
+.notee{
+	padding-right: 7px!important;
+	background-color: rgba(0, 0, 255, 0.158);
+}
+.whit{
+	padding-right: 7px!important;
+	background-color: rgba(0, 255, 106, 0.158);
+}
+.unread{
+	background-color: rgba(0, 0, 255, 0.521)!important;
+}
+.red_alert{
+	background-color: rgba(255, 0, 0, 0.377)!important;
+}
+.ad_note{
+	background-color: rgba(108, 110, 0, 0.363)!important;
+}
+.noans{
+	background-color: rgb(155, 35, 61)!important;
+
+}
+/**** SCROLL BIG ***/
+#projs{
+	overflow-x:scroll;
+	width:100%;
+	
+	overflow:none;
+
+}
+#projs #scrolli{
+	width:2000px!important;
+}
+#projs #des_scrolli{
+	width:1720px!important;
+}
+#projs #cus_scrolli{
+	width:2350px!important;
+}
+
+/**** SCROLL BIG END ***/
+#projs .col{
+	border-left: solid 1px white;
+	border-right: solid 1px white;
+}
+#projs .col .num{
+	width: 20%!important;
+	border-left: solid 1px white;
+}
+
+
+.attach{
+	background-color: rgb(84, 97, 0)!important;
+	color: white;
+}
+
+.client_name{
+	text-decoration: underline;
+	padding: 5px;
+	border-radius: 5px;
+	background-color: rgba(255, 255, 0, 0.247);
+}
+.topp{
+	box-shadow: 0 0.7px 4px blue;
+}
+.mssg{
+	/* background-color: blue;
+	height: 300px; */
+}
+.mssg_box{
+	box-shadow: 0 0.5px 4px blue;
+}
+.up_mssg{
+	padding: 3px 8px;
+	background-color: white;
+	border-radius: 10px;
+	border-bottom-right-radius: 0;
+	margin-top: 5px;
+	max-width: 80%;
+}
+.down_mssg{
+	padding: 3px 8px;
+	background-color: rgba(255, 255, 0, 0.377);
+	border-radius: 10px;
+	border-top-left-radius: 0;
+	margin-top: 5px;
+	max-width: 80%;
+	transition: 1s ease;
+}
+
+.btn-search{
+	background-color: rgb(78, 78, 255);
+	border-top-right-radius: 0!important;
+	border-bottom-right-radius: 0!important;
+}
+
+.text_area{
+	border-radius: 5px!important;
+
+	border-top-left-radius: 0!important;
+	border-bottom-left-radius: 0!important;
+
+	transition: 1s ease;
+}
+.text_area:focus{
+	box-shadow: none!important;
+	background-color: rgba(0, 0, 255, 0.158);
+}
+.unread{
+	background-color: blue;
+	color: white;
+}
+#scroll_mssg{
+	overflow-y: scroll;
+	max-height: 300px!important;
+}
+#scroll_mssg::-webkit-scrollbar {
+	width: 5px;
+}
+
+.send textarea::-webkit-scrollbar {
+	width: 5px;
+}
+
+#scroll_mssg::-webkit-scrollbar-thumb {
+	background: rgb(0, 0, 177);
+	border-radius: 20px;
+}
+.sche{
+	box-shadow: 0 0.5px 4px black;
+}
+.covs{
+	box-shadow: 0 0.5px 4px black;
+}
+.btn-sched{
+	box-shadow: 0 0.5px 4px blue;
+}
+.btn-tan{
+	background-color: rgb(187, 143, 62);
+	color: black;
+}
+.btn-close{
+	background-color: white;
+	color: black;
+	border: 1px solid black!important;
+}
+.conv{
+	background-color: rgba(0, 0, 0, 0.308);
+}
+button:focus{
+	box-shadow: none!important;
+}
+.space{
+	box-shadow: 0 0.4px 4px black;
+}
+
+.bx{
+	border-top: 1px dotted blue;
+	border-bottom: 1px dotted blue;
+}
+.btn-deep_green{
+	background-color: rgb(0, 54, 0);
+	color: white!important;
+}
+
+#form{
+    padding: 5px;
+    background-color: white;
+}
+.btn-bblue{
+    color: rgb(0, 0, 71);
+    border: 2px solid rgb(0, 0, 71)!important;
+}
+.btn-mat{
+	background-color: black;
+	color: white;
+}
+#materials_table{
+	box-shadow: 0 0.4px 5px black;
+}
+#matt{
+	border-bottom: 2px dotted blue;
+}
+.specs{
+	padding: 10px;
+	font-size: 15px;
+}
+.title h6{
+	font-weight: bold!important;
+	color: rgb(153, 153, 72);
+}
+.title{
+	border-bottom: 1px dotted rgb(153, 153, 72);
+}
+@media(min-width: 700px){
+	.mat_img{
+		max-height: 150px!important;
+	}
+}
+.fn-13{
+	font-size: 13px;
+}
+.btn-image{
+	padding: 0!important;
+	margin: 0!important;
+}

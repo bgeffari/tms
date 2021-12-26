@@ -1,0 +1,98 @@
+<?php
+
+include('../../config/config.php');
+$admin = $_SESSION['id'];
+
+
+
+if(isset($_POST["limit"], $_POST["start"]))
+{
+
+	$query = "SELECT * FROM orders WHERE employee_id = '$admin' AND status_id != '2' ORDER BY id DESC LIMIT ".$_POST["start"].", ".$_POST["limit"]."";
+	
+    $messages_query = mysqli_query($con, $query);
+	$count = $_POST["start"]+1;
+
+	while($row = mysqli_fetch_array($messages_query))
+	{
+        $id = $row['id'];
+        $employ_details = $row['employ_details'];
+        $req_details = $row['req_details'];
+        $fnish_date = $row['date_end'];
+        $fnish_date = substr($fnish_date , 0,10); // to get the date only without time
+        $pro_date = $row['date_added'];
+        $pro_date = substr($pro_date , 0,10); // to get the date only without time
+
+        $requester_id = $row['requester_id'];
+        $employee_id = $row['employee_id'];
+        $mission_id = $row['mission_id'];
+        $status_id = $row['status_id'];
+        $cervice = $row['mange_cerv'];
+        $phone = $row['phone'];
+        $rate = $row['req_rate'];
+
+
+
+        $get_mar = mysqli_query($con, "SELECT * FROM requester WHERE id = '$requester_id'");
+        $mar_res = mysqli_fetch_array($get_mar);
+        $req_name = $mar_res['name'];
+
+        $get_des = mysqli_query($con, "SELECT * FROM employees WHERE id = '$employee_id'");
+        $des_res = mysqli_fetch_array($get_des);
+        $empl_name = $des_res['name'];
+        $empl_phone =$des_res['phone'];
+
+        $get_type = mysqli_query($con, "SELECT * FROM missions WHERE id = '$mission_id'");
+        $typ_res = mysqli_fetch_array($get_type);
+        $miss_name = $typ_res['name'];
+
+        $get_status = mysqli_query($con, "SELECT * FROM status WHERE id = '$status_id'");
+        $status_res = mysqli_fetch_array($get_status);
+        $status_button = $status_res['name'];
+        if ($employ_details != "") {
+            $employ_detailss = $employ_details;
+        }else{
+            $employ_detailss = 'قم باضافة ملاحظاتك';
+        }
+        
+        if($rate > 2 && $status_id == 2) {
+$status = ' <a class="btn " data-toggle="modal" >'.$status_button.'<img src="../work/imgs/icons/double-check.png" class="float-left" height="20">
+           </a>';
+} else{
+$status = ' <a class="btn " data-toggle="modal" data-target="#update_status'.$id.'">'.$status_button.'
+           </a>' ;
+}
+        
+        
+        
+        
+	  echo '
+      <div class="row prroj py-2">
+        <div class="col text-center num">'.$count.'</div>
+        <div class="col text-center">'.$pro_date.'</div>
+        <div class="col text-center">'.$req_name.'</div>
+        <div class="col text-center">'.$miss_name.'</div>
+        <div class="col text-center">'.$phone.'</div>
+        <div class="col text-center">'.$cervice.'</div>
+        <div class="col text-center" style="overflow: hidden;"><a href="" class="btn btn-info btn-sm" data-toggle="modal" data-target="#show_detailreq'.$id.'">'.$req_details.'</a></div>
+        <div class="col text-center" style="overflow: hidden;"><a href="" class="btn btn-info btn-sm" data-toggle="modal" data-target="#end_date'.$id.'">'.$fnish_date.'</a></div>
+        <div class="col text-center"><a class="btn " data-toggle="modal" data-target="#update_status'.$id.'">'.$status.'</a></div>
+        <div class="col text-center">
+            <button class="btn btn-sm btn-status" href="" data-toggle="modal" data-target="#view_attach'.$id.'">مُراجعة المُرفقات</button>
+        </div>
+
+        <div class="col text-center" style="overflow: hidden;"><a href="" class="btn btn-info btn-sm" data-toggle="modal" data-target="#add_detail'.$id.'">'.$employ_detailss.'</a></div>
+       
+        
+    </div>
+      ';
+    
+        $count++;
+	} //end of while
+} // end of if
+
+
+?>
+
+
+
